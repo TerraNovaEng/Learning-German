@@ -1,0 +1,41 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f7f6;
+    margin: 0;
+}
+
+.progress {
+    font-size: 0.8rem;
+    color: #bdc3c7;
+    margin-top: 1rem;
+}
+
+#word-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.phrase { font-size: 1.5rem; color: #2c3e50; margin-bottom: 0.5rem; }
+.transliteration { color: #7f8c8d; font-style: italic; }
+.root { font-family: monospace; color: #e67e22; }
+.meaning { font-weight: bold; margin-top: 1rem; color: #27ae60; }
+
+#next-btn {
+    margin-top: 1.5rem;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+}
