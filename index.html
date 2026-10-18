@@ -1,8 +1,15 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German Learner</title>
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" href="public/icon-192.png">
+
     <link rel="stylesheet" href="public/style.css">
 </head>
 <body>
@@ -11,9 +18,18 @@
         <div id="word-container"></div>
         <button id="next-btn">Next Word</button>
     </div>
-    <script src="src/app.js"></script>
-</body>
-<script src="src/app.js"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('Service Worker registered!', reg))
+                    .catch(err => console.log('Service Worker registration failed:', err));
+            });
+        }
+    </script>
+    
     <script src="src/app.js"></script>
 </body>
 </html>
