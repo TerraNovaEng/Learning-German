@@ -28,14 +28,23 @@ body {
 .root { font-family: monospace; color: #e67e22; }
 .meaning { font-weight: bold; margin-top: 1rem; color: #27ae60; }
 
-#next-btn {
+.button-container {
+    display: flex;
+    gap: 10px;
     margin-top: 1.5rem;
-    padding: 10px 20px;
+}
+
+#prev-btn, #next-btn {
+    flex: 1;
+    padding: 10px 15px;
     background-color: #3498db;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 0.9rem;
+}
 
-
+#prev-btn:hover, #next-btn:hover {
+    background-color: #2980b9;
 }
