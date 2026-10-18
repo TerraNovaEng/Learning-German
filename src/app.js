@@ -11,7 +11,6 @@ function shuffle(array) {
 
 async function loadWords() {
     try {
-        // CHANGED: Use './' to ensure the path is relative to the current folder
         const response = await fetch('./data/words.json');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         
@@ -38,6 +37,11 @@ function renderWord() {
         <p class="progress">Word ${currentIndex + 1} of ${wordData.length}</p>
     `;
 }
+
+document.getElementById('prev-btn').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + wordData.length) % wordData.length;
+    renderWord();
+});
 
 document.getElementById('next-btn').addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % wordData.length;
